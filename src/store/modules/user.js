@@ -20,7 +20,7 @@ const user = {
       state.avatar = avatar
     },
     SET_ROLES: (state, roles) => {
-      state.roles = roles
+      state.roles = roles //没用上感觉
     }
   },
 

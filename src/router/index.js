@@ -30,18 +30,18 @@ export const constantRouterMap = [
       path: 'home',
       name: 'home',
       component: () => import('@/views/home/index'),
-      meta: {title: '仪表盘', icon: 'dashboard'}
+      meta: {title: '首页', icon: 'dashboard'}
     },
-    {
-      name: 'document',
-      path: 'https://www.macrozheng.com',
-      meta: {title: '学习教程', icon: 'document'}
-    },
-    {
-      name: 'video',
-      path: 'https://www.macrozheng.com/mall/catalog/mall_video.html',
-      meta: {title: '视频教程', icon: 'video'}
-    },
+    // {
+    //   name: 'document',
+    //   path: 'https://www.macrozheng.com',
+    //   meta: {title: '学习教程', icon: 'document'}
+    // },
+    // {
+    //   name: 'video',
+    //   path: 'https://www.macrozheng.com/mall/catalog/mall_video.html',
+    //   meta: {title: '视频教程', icon: 'video'}
+    // },
     ]
   }
 ]
@@ -63,7 +63,8 @@ export const asyncRouterMap = [
         path: 'addProduct',
         name: 'addProduct',
         component: () => import('@/views/pms/product/add'),
-        meta: {title: '添加商品', icon: 'product-add'}
+        meta: {title: '添加商品', icon: 'product-add'},
+        hidden: true
       },
       {
         path: 'updateProduct',
@@ -117,26 +118,6 @@ export const asyncRouterMap = [
         name: 'updateProductAttr',
         component: () => import('@/views/pms/productAttr/updateProductAttr'),
         meta: {title: '修改商品属性'},
-        hidden: true
-      },
-      {
-        path: 'brand',
-        name: 'brand',
-        component: () => import('@/views/pms/brand/index'),
-        meta: {title: '品牌管理', icon: 'product-brand'}
-      },
-      {
-        path: 'addBrand',
-        name: 'addBrand',
-        component: () => import('@/views/pms/brand/add'),
-        meta: {title: '添加品牌'},
-        hidden: true
-      },
-      {
-        path: 'updateBrand',
-        name: 'updateBrand',
-        component: () => import('@/views/pms/brand/update'),
-        meta: {title: '编辑品牌'},
         hidden: true
       }
     ]

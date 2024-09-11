@@ -25,6 +25,7 @@
 import { mapGetters } from 'vuex'
 import Breadcrumb from '@/components/Breadcrumb'
 import Hamburger from '@/components/Hamburger'
+import img_icon from '@/assets/images/icon.png';
 
 export default {
   components: {
@@ -34,8 +35,10 @@ export default {
   computed: {
     ...mapGetters([
       'sidebar',
-      'avatar'
-    ])
+    ]),
+    avatar() {
+      return img_icon;  // 将本地的图片资源返回作为 avatar
+    }
   },
   methods: {
     toggleSideBar() {
