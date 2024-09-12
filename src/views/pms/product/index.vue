@@ -70,7 +70,7 @@
         <el-table-column label="商品图片" width="120" align="center">
           <template slot-scope="scope"><img style="height: 80px" :src="scope.row.pic"></template>
         </el-table-column>
-        <el-table-column label="商品名称" align="center">
+        <el-table-column label="商品名称/分类" align="center">
           <template slot-scope="scope">
             <p>{{scope.row.name}}</p>
           </template>
@@ -100,6 +100,14 @@
               </el-switch>
             </p>
             <p>推荐：
+              <el-switch
+                @change="handleRecommendStatusChange(scope.$index, scope.row)"
+                :active-value="1"
+                :inactive-value="0"
+                v-model="scope.row.recommandStatus">
+              </el-switch>
+            </p>
+            <p>缺货：
               <el-switch
                 @change="handleRecommendStatusChange(scope.$index, scope.row)"
                 :active-value="1"
@@ -293,30 +301,30 @@
             label: "商品下架",
             value: "publishOff"
           },
-          // {
-          //   label: "商品缺货",
-          //   value: "outOfStock"
-          // },
+          {
+            label: "商品缺货",
+            value: "outOfStock"
+          },
+          {
+            label: "设为推荐",
+            value: "recommendOn"
+          },
+          {
+            label: "取消推荐",
+            value: "recommendOff"
+          },
+          {
+            label: "设为新品",
+            value: "newOn"
+          },
+          {
+            label: "取消新品",
+            value: "newOff"
+          },
           {
             label: "删除",
             value: "delete"
-          }
-          // {
-          //   label: "设为推荐",
-          //   value: "recommendOn"
-          // },
-          // {
-          //   label: "取消推荐",
-          //   value: "recommendOff"
-          // },
-          // {
-          //   label: "设为新品",
-          //   value: "newOn"
-          // },
-          // {
-          //   label: "取消新品",
-          //   value: "newOff"
-          // },
+          },
           // {
           //   label: "转移到分类",
           //   value: "transferCategory"

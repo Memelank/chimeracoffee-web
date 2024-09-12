@@ -237,12 +237,12 @@ export const asyncRouterMap = [
         meta: {title: '优惠券领取详情'},
         hidden:true
       },
-      {
-        path: 'brand',
-        name: 'homeBrand',
-        component: () => import('@/views/sms/brand/index'),
-        meta: {title: '品牌推荐', icon: 'product-brand'}
-      },
+      // {
+      //   path: 'brand',
+      //   name: 'homeBrand',
+      //   component: () => import('@/views/sms/brand/index'),
+      //   meta: {title: '品牌推荐', icon: 'product-brand'}
+      // },
       {
         path: 'new',
         name: 'homeNew',

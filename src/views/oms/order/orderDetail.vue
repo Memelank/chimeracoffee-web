@@ -117,7 +117,7 @@
         <el-table-column label="商品名称" align="center">
           <template slot-scope="scope">
             <p>{{scope.row.productName}}</p>
-            <p>品牌：{{scope.row.productBrand}}</p>
+<!--            <p>品牌：{{scope.row.productBrand}}</p>-->
           </template>
         </el-table-column>
         <el-table-column label="价格/货号" width="120" align="center">

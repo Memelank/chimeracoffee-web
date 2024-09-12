@@ -15,7 +15,7 @@
         <el-table-column label="商品名称" align="center">
           <template slot-scope="scope">
             <span class="font-small">{{scope.row.productName}}</span><br>
-            <span class="font-small">品牌：{{scope.row.productBrand}}</span>
+<!--            <span class="font-small">品牌：{{scope.row.productBrand}}</span>-->
           </template>
         </el-table-column>
         <el-table-column label="价格/货号" width="180" align="center">
@@ -223,7 +223,7 @@
     handleTime: null,
     productPic: null,
     productName: null,
-    productBrand: null,
+    // productBrand: null,
     productAttr: null,
     productCount: null,
     productPrice: null,
