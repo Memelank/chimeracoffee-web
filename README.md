@@ -1,5 +1,9 @@
 # ChimeraCoffee-Web
 
+### 原项目
+
+https://github.com/macrozheng/mall-admin-web?tab=readme-ov-file
+
 ### 部署
 ```markdown
 1. 下载nodejs并安装，最好使用v12.14.0版本，版本不对会导致npm install出错，下载地址：https://nodejs.org/dist/v12.14.0/node-v12.14.0-x64.msi
